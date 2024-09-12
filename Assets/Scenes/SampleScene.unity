@@ -915,6 +915,7 @@ GameObject:
   - component: {fileID: 1288033688}
   - component: {fileID: 1288033692}
   - component: {fileID: 1288033691}
+  - component: {fileID: 1288033693}
   m_Layer: 0
   m_Name: PaddleR
   m_TagString: Untagged
@@ -1022,7 +1023,7 @@ HingeJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   serializedVersion: 2
-  m_UseSpring: 0
+  m_UseSpring: 1
   m_Spring:
     spring: 0
     damper: 0
@@ -1074,6 +1075,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1288033693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288033686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e144eb30db8cca40b49ae5a77e448b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: 100
+  springPower: 1000
 --- !u!1 &1657104365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,6 +1103,7 @@ GameObject:
   - component: {fileID: 1657104367}
   - component: {fileID: 1657104371}
   - component: {fileID: 1657104370}
+  - component: {fileID: 1657104372}
   m_Layer: 0
   m_Name: PaddleL
   m_TagString: Untagged
@@ -1195,7 +1211,7 @@ HingeJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   serializedVersion: 2
-  m_UseSpring: 0
+  m_UseSpring: 1
   m_Spring:
     spring: 0
     damper: 0
@@ -1247,6 +1263,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1657104372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657104365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e144eb30db8cca40b49ae5a77e448b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: 97
+  springPower: 1000
 --- !u!1 &1981914779
 GameObject:
   m_ObjectHideFlags: 0
