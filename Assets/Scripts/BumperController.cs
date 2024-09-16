@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class BumperController : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class BumperController : MonoBehaviour
     private Animator animator;
 
     private Renderer rend;
+    public AudioManager audioManager;
+    public VFXManager VFXManager;
+    public ScoreController scoreController;
+    public float score;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,12 +31,14 @@ public class BumperController : MonoBehaviour
     {
         if (collision.collider.name == "Ball")
         {
-            Debug.Log("HIT");
+            //Debug.Log("HIT");
             Rigidbody ballRB = collision.collider.GetComponent<Rigidbody>();
             ballRB.velocity *= multiplier;
 
             animator.SetTrigger("hit");
-
+            audioManager.PlaySFX(collision.transform.position);
+            VFXManager.PlayVFX(collision.transform.position);
+            scoreController.AddScore(score);
         }
         
     }
